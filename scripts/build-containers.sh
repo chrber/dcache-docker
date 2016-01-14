@@ -13,6 +13,8 @@ docker build --rm --no-cache -t dcache/nfs:${tag} ../dcache/nfs/ \
 docker build --rm --no-cache -t dcache/xrootd:${tag} ../dcache/xrootd/ \
 &&
 docker build --rm --no-cache -t dcache/standalone${tag} ../dcache/standalone/ \
+&&
+docker build --rm --no-cache -t dcache/srm:${tag} ../dcache/srm/ \
 
 echo "Generating docker-compose.yml file in ../dcache/head/docker-compose.yml"
 

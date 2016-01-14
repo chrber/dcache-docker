@@ -80,4 +80,15 @@ nfs:
   links:
    - head:dcachebroker
    - db:dcachedb
-
+srm:
+  image: dcache/srm:master
+  hostname: $(hostname)
+  domainname: $(hostname -d)
+  environment:
+    - DOMAIN=srmDoor
+  expose:
+    - 8443
+  ports:
+    - "8443:8443"
+  links:
+    - head:dcachebroker
